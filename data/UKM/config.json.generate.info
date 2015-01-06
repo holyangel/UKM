@@ -15,7 +15,7 @@ cat << CTAG
 					description:"Created by <a href='http://forum.xda-developers.com/member.php?u=5658634'>apb_axel</a>."
 				}},
 				{ SDescription:{
-					description:"Version 3.6.1"
+					description:"Version 3.6.1 - SkyDragon Edition"
 				}},
 				{ SDescription:{
 					description:"XDA Link: <a href='http://forum.xda-developers.com/android/software/zip-synapse-script-universal-kernel-t2736986'>HERE</a>"
@@ -28,12 +28,6 @@ cat << CTAG
 					}},
 					{ SDescription:{
 						description:"> <a href='http://forum.xda-developers.com/member.php?u=4167023'>AndreiLux</a>"
-					}},
-					{ SDescription:{
-						description:"> <a href='http://forum.xda-developers.com/member.php?u=4544860'>osm0sis</a>"
-					}},
-					{ SDescription:{
-						description:"> <a href='http://forum.xda-developers.com/member.php?u=3873953'>eng.stk</a>"
 					}},
 			{ SPane:{
 				title:{
@@ -72,7 +66,7 @@ cat << CTAG
 					if [ -n $MODVER ]; then 
 						$BB echo $MODVER;
 					else 
-						$BB echo \`getprop ro.build.version.incremental\`;
+						$BB echo \`getprop ro.build.display.id\`;
 					fi;`"
 			}},
 			{ SPane:{
