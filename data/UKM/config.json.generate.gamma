@@ -2,6 +2,19 @@ cat << CTAG
 {
 	name:GAMMA,
 		elements:[
+			`if [ -f "/sys/devices/virtual/graphics/fb0/sharpening" ]; then
+			LGS=\`$BB cat /sys/devices/virtual/graphics/fb0/sharpening\`
+			
+				$BB echo '{ SPane:{
+					title:"LG Sharpening Mode"
+				}},
+					{ SCheckBox:{
+						label:"Enabled",
+						description:"Toggle LG Sharpening mode on/off for easier reading.",
+						default:'$LGS',
+						action:"generic /sys/devices/virtual/graphics/fb0/sharpening"
+					}},'
+			fi`
 			`if [ -d "/sys/devices/platform/kcal_ctrl.0" ]; then
 				if [ -f "/sys/devices/platform/kcal_ctrl.0/kcal" ]; then
 				KCAL=\`$BB cat /sys/devices/platform/kcal_ctrl.0/kcal\`;
