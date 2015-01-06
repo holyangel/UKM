@@ -62,11 +62,11 @@ cat << CTAG
 					en:"ROM Version",
 					es:"Versión del ROM"
 				},
-				description:"`MODVER=\`getprop ro.modversion\`;
+				description:"`MODVER=\`getprop ro.build.display.id\`;
 					if [ -n $MODVER ]; then 
 						$BB echo $MODVER;
 					else 
-						$BB echo \`getprop ro.build.display.id\`;
+						$BB echo \`getprop ro.build.version.incremental\`;
 					fi;`"
 			}},
 			{ SPane:{
